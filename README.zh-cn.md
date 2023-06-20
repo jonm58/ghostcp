@@ -15,13 +15,13 @@ GOOS=windows GOARCH=amd64 go build
 
 ## 如何配置
 ```
-  server=IP:Port    #配置中的端口#domain将使用此DNS（DNSoverTCP），如果未设置它将使用系统的DNS
+  server=IP:端口    #配置中的域将使用此DNS（DNSoverTCP），如果未设置，它将使用系统的DNS
   ipv6=true/false   #下面的将启用/禁用 IPv6
   subdomain=*       #set域搜索的深度，默认为 2
   ttl=*             #伪造的 TCP 数据包将使用此 TTL
   domain=ip，ip,... #这个域将使用这些IP
   domain            #这个域将由 DNS 解析
-  IP：端口          #这个 IP：端口在创建连接时会发送假数据包
+  IP:端口           #这个 IP：端口在创建连接时会发送假数据包
   method=*          #修改 TCP 的方法
   ```
 ### 方法：
