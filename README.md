@@ -1,3 +1,6 @@
+🌏: [English](https://github.com/jonm58/ghostcp/blob/master/README.md),
+[**简体中文**](https://github.com/jonm58/ghostcp/blob/master/README.zh-cn.md)
+
 # GhosTCP
 GhosTCP is a program for Windows that protects the TCP connections from being interfered.  
 
