@@ -1,4 +1,4 @@
-package tcpioneer
+package ghostcp
 
 import (
 	"bytes"
@@ -62,18 +62,34 @@ func getCookies(option []byte) []byte {
 	return nil
 }
 
-func TCPRecv(srcPort int, forward bool) {
+func TCPRecv(address string, forward bool) {
 	if (TFOEnable || RSTFilterEnable || DetectEnable) == false {
+		return
+	}
+
+	tcpAddr, err := net.ResolveTCPAddr("tcp", address)
+	if err != nil {
+		if LogLevel > 0 {
+			log.Println(err)
+		}
 		return
 	}
 
 	var filter string
 	var layer uint8
 	if forward {
-		filter = fmt.Sprintf("tcp.SrcPort == %d and (", srcPort)
+		if address[0] == ':' {
+			filter = fmt.Sprintf("tcp.SrcPort == %s and (", address[1:])
+		} else {
+			filter = fmt.Sprintf("ip.SrcAddr = %s and tcp.SrcPort == %d and (", tcpAddr.IP.String(), tcpAddr.Port)
+		}
 		layer = 1
 	} else {
-		filter = fmt.Sprintf("inbound and tcp.SrcPort == %d and (", srcPort)
+		if address[0] == ':' {
+			filter = fmt.Sprintf("inbound and tcp.SrcPort == %s and (", address[1:])
+		} else {
+			filter = fmt.Sprintf("inbound and ip.SrcAddr = %s and tcp.SrcPort == %d and (", tcpAddr.IP.String(), tcpAddr.Port)
+		}
 		layer = 0
 	}
 
@@ -201,13 +217,23 @@ func TCPRecv(srcPort int, forward bool) {
 					}
 
 					if info != nil && info.Option&OPT_TFO != 0 {
-						ackNum := binary.BigEndian.Uint32(packet.Raw[ipheadlen+8:])
-						ackNum = info.SeqNum + 1
-						binary.BigEndian.PutUint32(packet.Raw[ipheadlen+8:], ackNum)
-						packet.CalcNewChecksum(winDivert)
+						tcpheadlen := int(packet.Raw[ipheadlen+12]>>4) * 4
+						optStart := ipheadlen + 20
+						option := packet.Raw[optStart : ipheadlen+tcpheadlen]
+						cookies := getCookies(option)
+						if cookies != nil {
+							tmp_cookies := make([]byte, len(cookies))
+							copy(tmp_cookies, cookies)
+							CookiesMap[packet.SrcIP().String()] = tmp_cookies
+							continue
+						} else {
+							ackNum := binary.BigEndian.Uint32(packet.Raw[ipheadlen+8:])
+							ackNum = info.SeqNum + 1
+							binary.BigEndian.PutUint32(packet.Raw[ipheadlen+8:], ackNum)
+							packet.CalcNewChecksum(winDivert)
+						}
 					}
 				}
-
 			} else if packet.Raw[ipheadlen+13]|TCP_RST != 0 {
 				if DetectEnable {
 					dstPort, _ := packet.DstPort()
@@ -628,7 +654,9 @@ func TCPDaemon(address string, forward bool) {
 
 				switch appLayer {
 				case TCP_DNS:
-					if payloadLen > 0 {
+					if info.Option&OPT_TFO != 0 {
+						continue
+					} else if payloadLen > 0 {
 						if len(packet.Raw[ipheadlen+tcpheadlen:]) > 21 {
 							host_offset = 14
 							host_length = 1
@@ -996,10 +1024,16 @@ func TCPDaemon(address string, forward bool) {
 								copy(rawbuf[int(packet.PacketLen)+2:], cookies)
 								packet.PacketLen += uint(offset * 4)
 
-								rawbuf[packet.PacketLen] = 0x16
-								rawbuf[packet.PacketLen+1] = 0x03
-								rawbuf[packet.PacketLen+2] = 0x01
-								packet.PacketLen += 3
+								if tcpAddr.Port == 53 {
+									binary.BigEndian.PutUint32(rawbuf[ipheadlen+4:], seqNum-uint32(len(TFOPayload)))
+									copy(rawbuf[packet.PacketLen:], TFOPayload)
+									packet.PacketLen += uint(len(TFOPayload))
+								} else {
+									rawbuf[packet.PacketLen] = 0x16
+									rawbuf[packet.PacketLen+1] = 0x03
+									rawbuf[packet.PacketLen+2] = 0x01
+									packet.PacketLen += 3
+								}
 							} else {
 								binary.BigEndian.PutUint16(rawbuf[ipheadlen:], 3)
 								packet.PacketLen += 4

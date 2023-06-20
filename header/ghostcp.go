@@ -1,4 +1,4 @@
-package tcpioneer
+package ghostcp
 
 import (
 	"bufio"
@@ -165,7 +165,7 @@ func IPLookup(addr string) (IPConfig, bool) {
 			}
 		} else {
 			for i := 64; i >= 16; i -= 16 {
-				mask := net.CIDRMask(i, 32)
+				mask := net.CIDRMask(i, 128)
 				addr := fmt.Sprintf("%s/%d", ip.Mask(mask).String(), i)
 				config, ok = IPMap[addr]
 				if ok {
@@ -198,7 +198,7 @@ func IPBlockLookup(addr string) (IPConfig, bool) {
 		}
 	} else {
 		for i := 64; i >= 16; i -= 16 {
-			mask := net.CIDRMask(i, 32)
+			mask := net.CIDRMask(i, 128)
 			addr := fmt.Sprintf("%s/%d", ip.Mask(mask).String(), i)
 			config, ok = IPMap[addr]
 			if ok {
@@ -439,6 +439,7 @@ func LoadConfig() error {
 							return err
 						}
 						DNS = tcpAddr.String()
+						DNSOption = option
 						IPMap[tcpAddr.IP.String()] = IPConfig{option, minTTL, maxTTL, syncMSS}
 						logPrintln(2, string(line))
 					} else if keys[0] == "ecs" {

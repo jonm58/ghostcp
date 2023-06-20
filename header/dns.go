@@ -1,4 +1,4 @@
-package tcpioneer
+package ghostcp
 
 import (
 	"encoding/binary"
@@ -8,21 +8,37 @@ import (
 )
 
 var DNS string = ""
+var DNSOption uint32 = 0
+var TFOPayload []byte = nil
 
 func TCPlookup(request []byte, address string) ([]byte, error) {
-	server, err := net.DialTimeout("tcp", address, time.Second*5)
-	if err != nil {
-		return nil, err
-	}
-	defer server.Close()
+	var conn net.Conn
+	var err error
 	data := make([]byte, 1024)
-	binary.BigEndian.PutUint16(data[:2], uint16(len(request)))
-	copy(data[2:], request)
+	if DNSOption&OPT_TFO != 0 {
+		binary.BigEndian.PutUint16(data[:2], uint16(len(request)))
+		copy(data[2:], request)
+		TFOPayload = data[:len(request)+2]
 
-	_, err = server.Write(data[:len(request)+2])
-	if err != nil {
-		return nil, err
+		conn, err = net.DialTimeout("tcp", address, time.Second*5)
+		if err != nil {
+			return nil, err
+		}
+	} else {
+		conn, err = net.DialTimeout("tcp", address, time.Second*5)
+		if err != nil {
+			return nil, err
+		}
+		data := make([]byte, 1024)
+		binary.BigEndian.PutUint16(data[:2], uint16(len(request)))
+		copy(data[2:], request)
+
+		_, err = conn.Write(data[:len(request)+2])
+		if err != nil {
+			return nil, err
+		}
 	}
+	defer conn.Close()
 
 	length := 0
 	recvlen := 0
@@ -30,7 +46,7 @@ func TCPlookup(request []byte, address string) ([]byte, error) {
 		if recvlen >= 1024 {
 			return nil, nil
 		}
-		n, err := server.Read(data[recvlen:])
+		n, err := conn.Read(data[recvlen:])
 		if err != nil {
 			return nil, err
 		}
