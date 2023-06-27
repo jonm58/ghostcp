@@ -1,6 +1,10 @@
+🌏: [English](https://github.com/jonm58/ghostcp/blob/master/README.md),
+[**简体中文**](https://github.com/jonm58/ghostcp/blob/master/README.zh-cn.md)
+
+# GhosTCP
 GhosTCP是一个适用于Windows的程序，可以保护TCP连接免受干扰。 
 
-## 编译
+# 编译
 ```
 git clone https://github.com/macronut/ghostcp
 CD Ghostcp
