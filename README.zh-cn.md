@@ -1,4 +1,4 @@
-🌏: [English](https://github.com/jonm58/ghostcp/blob/master/README.md),
+🌏: [English](https://github.com/jonm58/ghostcp/blob/master/README.md)，
 [**简体中文**](https://github.com/jonm58/ghostcp/blob/master/README.zh-cn.md)
 
 # GhosTCP
@@ -35,10 +35,12 @@ GOOS=windows GOARCH=amd64 go build
   w-csum    #假TCP数据包将具有错误的校验和
   w-ack     #假TCP数据包将具有错误的 ACK 编号
   tfo       #当服务器支持 TCP 快速打开时，SYN数据包将获取部分数据
-  
-DF          #真正的TCP数据包不会被分段
-https       #在端口 80 上使用 HTTP 时，下面的域将移动到 HTTPS
+  DF        #真正的TCP数据包不会被分段
+  https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
 ```
 ## 如何获取 TTL
 tracert 8.8.8.8
 将 TTL 长于 TTL 设置为IP地址在您所在区域内且短于服务器的TTL的节点。
+
+# 其他
+- 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明
