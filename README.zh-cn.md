@@ -44,3 +44,4 @@ tracert 8.8.8.8
 
 # 其他
 - 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明
+- [最新的配置文件](https://github.com/jonm58/ghostcp/blob/master/%E5%8F%91%E8%A1%8C%E7%89%88/default.conf)
