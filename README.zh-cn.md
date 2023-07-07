@@ -4,6 +4,16 @@
 # GhosTCP
 GhosTCP是一个适用于Windows的程序，可以保护TCP连接免受干扰。 
 
+# 致谢
+ - macronut/ghostcp
+ - 850710247liu/TCPioneer R.I.P Hmoegirl
+ - ideaexplorer233/TCPioneer
+ - ~~retsuakiko-sg/ghostcp~~ RetsuAkiko-SG/HmoePioneer
+ - debugzxcv/ghostcp/actions
+ - Nanqiang01/gghosts
+ - yuijker/ghostcp-850710247liu
+ - GoodCoder666/GoogleTranslate_IPFinder
+
 # 编译
 ```
 git clone https://github.com/macronut/ghostcp
