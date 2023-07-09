@@ -13,6 +13,7 @@ GhosTCP是一个适用于Windows的程序，可以保护TCP连接免受干扰。
  - Nanqiang01/gghosts
  - yuijker/ghostcp-850710247liu
  - GoodCoder666/GoogleTranslate_IPFinder
+ - lonelylose/TCPioneer
 
 # 编译
 ```
