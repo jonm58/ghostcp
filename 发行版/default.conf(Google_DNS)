@@ -286,7 +286,6 @@ method=none
 #Twitter
 ttl=6
 md5=5
-mss=384
 method=ttl,w-md5,s-seg,no-flag
 twitter.com=104.244.42.13,104.244.42.78,104.244.42.141,104.244.42.142,104.244.42.206
 .twitter.com=[twitter.com]
@@ -543,9 +542,8 @@ chromium.org=[google.com]
 #ipv6=ture
 #.googlevideo.com
 
-#Google(CN-testing)
-ttl=15
-google.cn=xn--ngstr-cn-8za9o.com,gvt1.com,rr1---sn-2x3eenez.googlevideo.com
+#Google_CN(testing)
+google.cn=xn--ngstr-cn-8za9o.com,gvt1.com,rr1---sn-2x3eenez.googlevideo.com,google.com
 g.cn=[google.cn]
 .google.cn=[google.cn]
 method=https
@@ -554,7 +552,7 @@ rr2---sn-2x3eenez.googlevideo.com=rr1---sn-2x3eenez.googlevideo.com,gvt1.com,xn-
 rr3---sn-2x3eenez.googlevideo.com=rr1---sn-2x3eenez.googlevideo.com,gvt1.com,xn--ngstr-cn-8za9o.com
 rr4---sn-2x3eenez.googlevideo.com=rr1---sn-2x3eenez.googlevideo.com,gvt1.com,xn--ngstr-cn-8za9o.com
 gvt1.com=203.208.39.19,203.208.39.20,203.208.39.21,203.208.39.22,203.208.39.23,203.208.39.24,203.208.39.25,203.208.39.26,203.208.39.27,203.208.39.28,203.208.39.29,203.208.39.30,203.208.39.31,203.208.39.32,203.208.39.33,203.208.39.34,203.208.39.35,203.208.39.36,203.119.2.218,203.208.43.119
-.gvt1.com=[gvt1.com]
+.gvt1.com=gvt1.com,google.com
 
 #patreon
 method=w-md5
