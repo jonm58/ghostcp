@@ -548,11 +548,11 @@ google.cn=xn--ngstr-cn-8za9o.com,gvt1.com,rr1---sn-2x3eenez.googlevideo.com,goog
 g.cn=[google.cn]
 .google.cn=[google.cn]
 method=https
-rr0---sn-2x3eenez.googlevideo.com=114.250.66.2,114.250.66.3,114.250.66.4,114.250.66.5,104.250.108.64,178.255.46.176,104.250.112.132,158.255.215.28,178.209.50.211,178.209.51.200,181.41.194.56,192.71.244.61,193.182.144.210,193.182.144.61,204.12.225.226,31.200.241.28,37.235.48.177,37.235.48.19,37.235.53.157,37.235.53.170,37.235.53.78,37.235.53.80,37.235.55.12,46.246.1.70,67.222.65.10,67.222.65.2,67.222.65.3,67.222.65.8,69.162.113.194,69.162.113.198,69.162.113.201,69.28.82.253,69.28.83.244,69.30.210.130,78.129.226.113,78.129.226.64,83.170.84.75,87.117.205.40,142.251.84.74,142.251.88.6,142.251.88.7,142.251.88.8,142.251.88.9,142.251.88.10
-rr1---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com,gvt1.com,xn--ngstr-cn-8za9o.com
-rr2---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com,gvt1.com,xn--ngstr-cn-8za9o.com
-rr3---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com,gvt1.com,xn--ngstr-cn-8za9o.com
-rr4---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com,gvt1.com,xn--ngstr-cn-8za9o.com
+rr0---sn-2x3eenez.googlevideo.com=114.250.66.2,114.250.66.3,114.250.66.4,114.250.66.5
+rr1---sn-2x3eenez.googlevideo.com=[rr0---sn-2x3eenez.googlevideo.com]
+rr2---sn-2x3eenez.googlevideo.com=[rr0---sn-2x3eenez.googlevideo.com]
+rr3---sn-2x3eenez.googlevideo.com=[rr0---sn-2x3eenez.googlevideo.com]
+rr4---sn-2x3eenez.googlevideo.com=[rr0---sn-2x3eenez.googlevideo.com]
 gvt1.com=203.208.39.19,203.208.39.20,203.208.39.21,203.208.39.22,203.208.39.23,203.208.39.24,203.208.39.25,203.208.39.26,203.208.39.27,203.208.39.28,203.208.39.29,203.208.39.30,203.208.39.31,203.208.39.32,203.208.39.33,203.208.39.34,203.208.39.35,203.208.39.36,203.119.2.218,203.208.43.119
 .gvt1.com=gvt1.com,google.com
 
