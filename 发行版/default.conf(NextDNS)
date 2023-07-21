@@ -313,10 +313,9 @@ nitter.lacontrevoie.fr
 nitter.nixnet.services
 nitter.fdn.fr
 nitter.1d4.us
-nitter.kavin.rocks=2603:c021:4001:b5fe:c56b:856b:efba:86c1 	,140.238.164.188
+nitter.kavin.rocks=2603:c021:4001:b5fe:c56b:856b:efba:86c1,140.238.164.188
 nitter.unixfox.eu=2605:6400:30:ee66::,104.244.72.25
 nitter.moomoo.me
-#twitter.owacon.moe - Bad Gateway
 nitter.weiler.rocks
 nitter.sethforprivacy.com
 nitter.nl
@@ -544,7 +543,7 @@ chromium.org=[google.com]
 #ipv6=ture
 #.googlevideo.com
 
-#Google_CN(testing)
+#Google(CN-testing)
 ttl=15
 google.cn=xn--ngstr-cn-8za9o.com,gvt1.com,rr1---sn-2x3eenez.googlevideo.com
 g.cn=[google.cn]
