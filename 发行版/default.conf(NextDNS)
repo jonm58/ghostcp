@@ -531,10 +531,11 @@ chromium.org=[google.com]
 .xn--ngstr-lra8j.com=[google.com]
 gvt1.com=203.208.39.19,203.208.39.20,203.208.39.21,203.208.39.22,203.208.39.23,203.208.39.24,203.208.39.25,203.208.39.26,203.208.39.27,203.208.39.28,203.208.39.29,203.208.39.30,203.208.39.31,203.208.39.32,203.208.39.33,203.208.39.34,203.208.39.35,203.208.39.36,203.119.2.218,203.208.43.119
 .gvt1.com=gvt1.com,google.com
+gstatic.cn=203.208.39.66,203.208.39.194,203.208.40.98,203.208.41.34,203.208.41.98,203.208.41.66,203.208.50.66
+.gstatic.cn=google.com,gstatic.cn
 
 #Youtube.Video
-subdomain=32
-method=https
+subdomain=4
 .googlevideo.com=[sniproxy]
 
 #Youtube.Video
@@ -543,15 +544,10 @@ method=https
 #.googlevideo.com
 
 #Google_CN(testing)
-ttl=0
-mss=0
-method=none
-gstatic.cn=203.208.39.66,203.208.39.194,203.208.40.98,203.208.41.34,203.208.41.98,203.208.41.66,203.208.50.66
-.gstatic.cn=[gstatic.cn]
 google.cn=xn--ngstr-cn-8za9o.com,gvt1.com,gstatic.cn,google.com
 g.cn=[google.cn]
 .google.cn=[google.cn]
-method=https,s-seg
+method=https
 rr0---sn-2x3eenez.googlevideo.com=103.246.246.144,114.250.66.2,114.250.66.3,114.250.66.4,114.250.66.5
 rr1---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com
 rr2---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com
