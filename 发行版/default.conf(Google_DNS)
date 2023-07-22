@@ -284,9 +284,8 @@ method=none
 #149.154.175.100=2001:67c:27e4:64::
 
 #Twitter
-ttl=6
-md5=5
-method=ttl,w-md5,s-seg,no-flag
+ttl=14
+method=ttl,s-seg,no-rst
 twitter.com=104.244.42.13,104.244.42.78,104.244.42.141,104.244.42.142,104.244.42.206
 .twitter.com=[twitter.com]
 pbs.twimg.com=104.244.42.201,152.199.43.83,192.229.237.101,192.229.237.96,104.244.42.137,104.244.45.9,151.101.108.159,146.75.116.159,117.18.237.70
@@ -483,7 +482,7 @@ invidious.sethforprivacy.com
 
 #Google
 ttl=15
-method=ttl,w-ack,w-md5,s-seg,https,w-csum,df
+method=ttl,w-ack,w-md5,s-seg,https,w-csum,df,no-rst
 
 sniproxy=104.250.108.64,178.255.46.176,104.250.112.132,158.255.215.28,178.209.50.211,178.209.51.200,181.41.194.56,192.71.244.61,193.182.144.210,193.182.144.61,204.12.225.226,31.200.241.28,37.235.48.177,37.235.48.19,37.235.53.157,37.235.53.170,37.235.53.78,37.235.53.80,37.235.55.12,46.246.1.70,67.222.65.10,67.222.65.2,67.222.65.3,67.222.65.8,69.162.113.194,69.162.113.198,69.162.113.201,69.28.82.253,69.28.83.244,69.30.210.130,78.129.226.113,78.129.226.64,83.170.84.75,87.117.205.40,142.251.84.74,142.251.88.6,142.251.88.7,142.251.88.8,142.251.88.9,142.251.88.10
 
@@ -492,10 +491,22 @@ golang.org=[sniproxy]
 .golang.org=[sniproxy]
 go.dev=[sniproxy]
 .go.dev=[sniproxy]
+google.ru=[sniproxy]
+google.com.ua=[sniproxy]
+.google.ru=[sniproxy]
+.google.com.ua=[sniproxy]
 
 google.com=64.233.189.191,216.239.32.40,108.177.97.100,142.251.171.90,142.251.168.90,74.125.196.113,34.64.4.94
 
 .googleapis.com=[google.com]
+google.com=[google.com]
+google.com.hk=[google.com]
+google.com.sb=[google.com]
+google.com.sg=[google.com]
+google.com.tw=[google.com]
+google.com.vn=[google.com]
+google.co.jp=[google.com]
+google.co.uk=[google.com]
 .google.com=[google.com]
 .google.com.hk=[google.com]
 .google.com.sb=[google.com]
@@ -503,6 +514,7 @@ google.com=64.233.189.191,216.239.32.40,108.177.97.100,142.251.171.90,142.251.16
 .google.com.tw=[google.com]
 .google.com.vn=[google.com]
 .google.co.jp=[google.com]
+.google.co.uk=[google.com]
 .googleusercontent.com=[google.com]
 .ytimg.com=[google.com]
 .youtube.com=[google.com]
@@ -529,7 +541,9 @@ chromium.org=[google.com]
 .virustotal.com=74.125.34.46
 
 .xn--ngstr-lra8j.com=[google.com]
-gvt1.com=203.208.39.19,203.208.39.20,203.208.39.21,203.208.39.22,203.208.39.23,203.208.39.24,203.208.39.25,203.208.39.26,203.208.39.27,203.208.39.28,203.208.39.29,203.208.39.30,203.208.39.31,203.208.39.32,203.208.39.33,203.208.39.34,203.208.39.35,203.208.39.36,203.119.2.218,203.208.43.119
+baidu.com.sb=35.213.164.15
+.baidu.com.sb=[baidu.com.sb]
+gvt1.com=203.208.39.19,203.208.39.20,203.208.39.21,203.208.39.22,203.208.39.23,203.208.39.24,203.208.39.25,203.208.39.26,203.208.39.27,203.208.39.28,203.208.39.29,203.208.39.30,203.208.39.31,203.208.39.32,203.208.39.33,203.208.39.34,203.208.39.35,203.208.39.36,203.119.2.218,203.208.43.119,203.208.37.99,203.208.37.104
 .gvt1.com=gvt1.com,google.com
 gstatic.cn=203.208.39.66,203.208.39.194,203.208.40.98,203.208.41.34,203.208.41.98,203.208.41.66,203.208.50.66
 .gstatic.cn=google.com,gstatic.cn
