@@ -12,7 +12,7 @@ server=8.8.8.8:53
 
 #Cloudflare
 method=quic,w-md5
-cfanycast=pixiv.re,www.who.int,fbi.gov,www.ietf.org,ns1.pixiv.net,ns2.pixiv.net
+cfanycast=pixiv.re,ns1.pixiv.net,ns2.pixiv.net,www.who.int,fbi.gov,www.ietf.org
 .cloudflare.com=[cfanycast]
 .cloudflare.net=[cfanycast]
 .pages.dev=[cfanycast]
@@ -68,11 +68,12 @@ saucenao.com=[cfanycast]
 
 #NextDNS
 method=w-md5,s-seg
-my.nextdns.io=76.76.21.164,76.76.21.123,76.76.21.22,76.76.21.142,76.76.21.61,76.76.21.98,76.76.21.241,76.76.21.242
+my.nextdns.io
 .nextdns.io
 api.nextdns.io=[cfanycast]
-dns.nextdns.io=45.11.104.186,37.252.249.233,37.252.230.153
+dns.nextdns.io=45.11.104.186,37.252.249.233
 dns1.nextdns.io=[dns.nextdns.io]
+dns2.nextdns.io=[dns.nextdns.io]
 nextdns.io=[cfanycast]
 .dns.nextdns.io
 
