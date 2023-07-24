@@ -108,8 +108,17 @@ white-plus.net=[south-plus.net]
 method=w-md5
 .gamer.com.tw=[cfanycast]
 
+#rule34
+gelbooru.com
+safebooru.org=[cfanycast]
+rule34.us=[cfanycast]
+api.rule34.xxx=[cfanycast]
+rule34.world
+
 #Danbooru
 danbooru.donmai.us=[cfanycast]
+hijiribe.donmai.us=[cfanycast]
+sonohara.donmai.us=[cfanycast]
 donmai.us=[cfanycast]
 .donmai.us=[donmai.us]
 
@@ -355,6 +364,7 @@ farside.link
 method=w-md5
 joinmastodon.org=151.101.65.91,151.101.193.91,151.101.1.91,151.101.193.91
 mastodon.social
+pawoo.net
 
 #bluesky
 cdn.segment.com
