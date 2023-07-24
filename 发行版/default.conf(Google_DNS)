@@ -67,8 +67,8 @@ saucenao.com=[cfanycast]
 .saucenao.com=[cfanycast]
 
 #NextDNS
+subdomain=16
 method=w-md5,s-seg
-my.nextdns.io
 .nextdns.io
 api.nextdns.io=[cfanycast]
 dns.nextdns.io=45.11.104.186,37.252.249.233
@@ -108,8 +108,28 @@ white-plus.net=[south-plus.net]
 method=w-md5
 .gamer.com.tw=[cfanycast]
 
+#rule34
+#paheal not working yep
+method=ttl,s-seg
+gelbooru.com
+.gelbooru.com
+safebooru.org=[cfanycast]
+rule34.us=[cfanycast]
+.rule34.xxx=[cfanycast]
+rule34porn.net
+rule34.world
+rule34.xyz
+r34.app=[cfanycast]
+.r34.app=[cfanycast]
+bleachbooru.org=[cfanycast]
+rule34video.com=[cfanycast]
+rule34.art
+.paheal.net=217.79.242.19,217.79.242.26,217.79.240.74
+
 #Danbooru
 danbooru.donmai.us=[cfanycast]
+hijiribe.donmai.us=[cfanycast]
+sonohara.donmai.us=[cfanycast]
 donmai.us=[cfanycast]
 .donmai.us=[donmai.us]
 
@@ -300,12 +320,14 @@ platform.twitter.map.fastly.net=151.101.228.157,151.101.108.157,146.75.112.157,1
 platform.twitter.com=[platform.twitter.map.fastly.net]
 .cms-twdigitalassets.com
 t.co=104.244.45.150,104.244.45.5
-method=none
-abs-0.twimg.com=151.101.228.160,151.101.192.159,151.101.108.157,151.101.108.158,151.101.28.158,146.75.72.157,146.75.104.159,146.75.104.158,151.101.108.160,146.75.104.157,146.75.80.159,151.101.36.157,146.75.100.160,151.101.112.158,151.101.192.158,151.101.192.157,151.101.192.160
-video.twimg.com=151.101.108.160,151.101.108.157,151.101.108.158,167.82.84.158,199.232.44.157,199.232.104.160,146.75.48.159,146.75.48.157,146.75.48.160,146.75.48.158,199.232.236.158,199.232.100.159
 
 vxtwitter.com
 fxtwitter.com
+
+method=none
+abs-0.twimg.com=151.101.228.160,151.101.192.159,151.101.108.157,151.101.108.158,151.101.28.158,146.75.72.157,146.75.104.159,146.75.104.158,151.101.108.160,146.75.104.157,146.75.80.159,151.101.36.157,146.75.100.160,151.101.112.158,151.101.192.158,151.101.192.157,151.101.192.160
+video.twimg.com=151.101.108.160,151.101.108.157,151.101.108.158,167.82.84.158,199.232.44.157,199.232.104.160,146.75.48.159,146.75.48.157,146.75.48.160,146.75.48.158,199.232.236.158,199.232.100.159
+x.com=[cfanycast]
 
 #nitter-(Twitter)
 method=w-md5,s-seg
@@ -353,6 +375,7 @@ farside.link
 method=w-md5
 joinmastodon.org=151.101.65.91,151.101.193.91,151.101.1.91,151.101.193.91
 mastodon.social
+pawoo.net
 
 #bluesky
 cdn.segment.com
@@ -553,7 +576,6 @@ gstatic.cn=203.208.39.66,203.208.39.194,203.208.40.98,203.208.41.34,203.208.41.9
 .gstatic.cn=google.com,gstatic.cn
 
 #Youtube.Video
-subdomain=4
 .googlevideo.com=[sniproxy]
 
 #Youtube.Video
