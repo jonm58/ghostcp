@@ -110,6 +110,7 @@ method=w-md5
 
 #rule34
 gelbooru.com
+.gelbooru.com
 safebooru.org=[cfanycast]
 rule34.us=[cfanycast]
 api.rule34.xxx=[cfanycast]
