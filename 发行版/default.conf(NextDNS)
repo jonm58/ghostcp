@@ -109,6 +109,7 @@ method=w-md5
 .gamer.com.tw=[cfanycast]
 
 #rule34
+#paheal not working yep
 method=ttl,s-seg
 gelbooru.com
 .gelbooru.com
@@ -123,6 +124,7 @@ r34.app=[cfanycast]
 bleachbooru.org=[cfanycast]
 rule34video.com=[cfanycast]
 rule34.art
+.paheal.net=217.79.242.19,217.79.242.26,217.79.240.74
 
 #Danbooru
 danbooru.donmai.us=[cfanycast]
