@@ -109,16 +109,17 @@ method=w-md5
 .gamer.com.tw=[cfanycast]
 
 #rule34
+method=ttl,s-seg
 gelbooru.com
 .gelbooru.com
 safebooru.org=[cfanycast]
 rule34.us=[cfanycast]
-api.rule34.xxx=[cfanycast]
+.rule34.xxx=[cfanycast]
 rule34porn.net
 rule34.world
 rule34.xyz
 r34.app=[cfanycast]
-rule-34.net=[cfanycast]
+.r34.app=[cfanycast]
 bleachbooru.org=[cfanycast]
 rule34video.com=[cfanycast]
 rule34.art
