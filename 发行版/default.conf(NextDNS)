@@ -2,7 +2,7 @@ log=2
 forward
 ttl=10
 mss=512
-method=quic,w-md5
+method=w-md5
 ecs=120.230.0
 server=45.90.28.71:5353
 #Google:8.8.8.8/8.8.4.4/2001:4860:4860::8888/2001:4860:4860::8844
@@ -114,7 +114,14 @@ gelbooru.com
 safebooru.org=[cfanycast]
 rule34.us=[cfanycast]
 api.rule34.xxx=[cfanycast]
+rule34porn.net
 rule34.world
+rule34.xyz
+r34.app=[cfanycast]
+rule-34.net=[cfanycast]
+bleachbooru.org=[cfanycast]
+rule34video.com=[cfanycast]
+rule34.art
 
 #Danbooru
 danbooru.donmai.us=[cfanycast]
