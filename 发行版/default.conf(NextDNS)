@@ -68,7 +68,7 @@ saucenao.com=[cfanycast]
 .saucenao.com=[cfanycast]
 
 #NextDNS
-subdomain=16
+subdomain=4
 method=w-md5,s-seg
 .nextdns.io
 api.nextdns.io=[cfanycast]
