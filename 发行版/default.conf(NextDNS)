@@ -3,7 +3,6 @@ forward
 ttl=10
 mss=512
 method=w-md5
-ecs=120.230.0
 server=45.90.28.71:5353
 #Google:8.8.8.8/8.8.4.4/2001:4860:4860::8888/2001:4860:4860::8844
 #NextDNS:45.90.28.71/45.90.30.71/2a07:a8c0::d3:f572/2a07:a8c1::d3:f572
@@ -11,8 +10,8 @@ server=45.90.28.71:5353
 #Cloudflare:1.1.1.1/1.0.0.1/2606:4700:4700::1111/2606:4700:4700::1001
 
 #Cloudflare
-method=quic,w-md5
-cfanycast=www.who.int,fbi.gov,www.ietf.org
+method=w-md5
+cfanycast=www.who.int,fbi.gov,www.ietf.org,ns1.pixiv.net,ns2.pixiv.net
 .cloudflare.com=[cfanycast]
 .cloudflare.net=[cfanycast]
 .pages.dev=[cfanycast]
@@ -127,7 +126,7 @@ bleachbooru.org=[cfanycast]
 rule34video.com=[cfanycast]
 .rule34video.com
 rule34.art
-.paheal.net=217.79.242.19,217.79.242.26,217.79.240.74
+.paheal.net
 
 #Danbooru
 ttl=4
@@ -166,7 +165,7 @@ dlsite.com=[donmai.us]
 
 #Pixiv
 method=w-md5,s-seg
-ns1.pixiv.net=104.21.234.146,188.114.99.229,104.16.166.123,104.19.208.69,104.16.161.215,104.16.204.135,103.21.244.32,173.245.58.36
+ns1.pixiv.net=104.21.234.146,104.21.234.146,104.21.234.147
 ns2.pixiv.net=104.16.166.123,104.19.208.69,104.16.161.215,104.16.204.135,103.21.244.32,173.245.58.36
 pixiv.net=[cfanycast]
 .pixiv.net=[cfanycast]
@@ -176,8 +175,8 @@ s.pximg.net=[cfanycast]
 
 #Pixiv.cat
 pixiv.cat=2404:2ec0:3:a::10,104.20.0.127,103.132.47.10
-i.pixiv.cat=104.21.234.146,104.21.234.147,104.20.0.127
-pixiv.re=[i.pixiv.cat]
+i.pixiv.cat=[cfanycast]
+pixiv.re=[cfanycast]
 i.pixiv.re=[pixiv.re]
 
 #Pinterest
@@ -334,14 +333,14 @@ video.twimg.com=151.101.108.160,151.101.108.157,151.101.108.158,167.82.84.158,19
 x.com=[cfanycast]
 
 #nitter-(Twitter)
-method=w-md5,s-seg
+method=s-seg
 nitter.net=185.246.188.57
 nitter.lacontrevoie.fr
 nitter.nixnet.services
 nitter.fdn.fr
 nitter.1d4.us
-nitter.kavin.rocks=2603:c021:4001:b5fe:c56b:856b:efba:86c1,140.238.164.188
-nitter.unixfox.eu=2605:6400:30:ee66::,104.244.72.25
+nitter.kavin.rocks
+nitter.unixfox.eu
 nitter.moomoo.me
 nitter.weiler.rocks
 nitter.sethforprivacy.com
@@ -365,22 +364,27 @@ nitter.hostux.net
 nitter.us.projectsegfau.lt
 nitter.kling.gg
 nitter.tux.pizza
+nitter.onthescent.xyz
+nitter.private.coffee
 nitter.oksocial.net
 nitter.services.woodland.cafe
 ntr.nah.re
-piped.kavin.rocks=[cfanycast]
-nitter.socialspill.com=[cfanycast]
+nitter.datura.network
+
 nitter.snopyta.org
 
 twiiit.com
 farside.link
 
 #mastodon
-method=w-md5
+method=ttl,w-md5,s-seg
 joinmastodon.org=151.101.65.91,151.101.193.91,151.101.1.91,151.101.193.91
+api.joinmastodon.org=151.101.65.91,151.101.193.91,151.101.1.91,151.101.193.91
 mastodon.social
+.mastodon.social=joinmastodon.org,mastodon.social
 pawoo.net
-
+*.pawoo.net=[pawoo.net]
+	
 #bluesky
 cdn.segment.com
 bsky.app
@@ -423,7 +427,7 @@ attachment.fbsbx.com=78.129.226.64,102.132.101.15,157.240.211.1,157.240.0.13,157
 lookaside.fbsbx.com=78.129.226.64,102.132.101.15,157.240.211.1,157.240.0.13,157.240.0.3
 
 #Instagram
-subdomain=8
+subdomain=4
 ttl=14
 method=ttl,s-seg,mode2
 instagram.com=102.132.101.174,157.240.218.174,31.13.75.174,157.240.0.174,157.240.8.174,157.240.15.174,157.240.199.174
@@ -528,6 +532,8 @@ google.com.tw=[google.com]
 google.com.vn=[google.com]
 google.co.jp=[google.com]
 google.co.uk=[google.com]
+google.ru=[google.com]
+google.com.ua=[google.com]
 .google.com=[google.com]
 .google.com.hk=[google.com]
 .google.com.sb=[google.com]
@@ -536,6 +542,8 @@ google.co.uk=[google.com]
 .google.com.vn=[google.com]
 .google.co.jp=[google.com]
 .google.co.uk=[google.com]
+.google.ru=[google.com]
+.google.com.ua=[google.com]
 .googleusercontent.com=[google.com]
 .ytimg.com=[google.com]
 .youtube.com=[google.com]
@@ -567,10 +575,6 @@ golang.org=[sniproxy]
 .golang.org=[sniproxy]
 go.dev=[sniproxy]
 .go.dev=[sniproxy]
-google.ru=[sniproxy]
-google.com.ua=[sniproxy]
-.google.ru=[sniproxy]
-.google.com.ua=[sniproxy]
 
 baidu.com.sb=35.213.164.15
 .baidu.com.sb=[baidu.com.sb]
@@ -809,6 +813,8 @@ curseforge.com=[cfanycast]
 sourceforge.net=[cfanycast]
 downloads.sourceforge.net=[cfanycast]
 .sourceforge.net
+theguardian.com
+.theguardian.com
 vimeo.com
 .vimeo.com
 rentry.co
