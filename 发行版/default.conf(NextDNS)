@@ -12,7 +12,7 @@ server=45.90.28.71:5353
 
 #Cloudflare
 method=quic,w-md5
-cfanycast=pixiv.re,ns1.pixiv.net,ns2.pixiv.net,www.who.int,fbi.gov,www.ietf.org
+cfanycast=www.who.int,fbi.gov,www.ietf.org
 .cloudflare.com=[cfanycast]
 .cloudflare.net=[cfanycast]
 .pages.dev=[cfanycast]
