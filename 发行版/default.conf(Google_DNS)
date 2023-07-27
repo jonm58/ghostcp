@@ -208,8 +208,8 @@ fgit.gq
 hub.fastgit.xyz=2.59.61.109
 
 #GitHub
-method=ttl,w-md5,s-seg
-github.com=20.205.243.166,20.27.177.113,140.82.112.4,192.30.255.113
+method=w-md5,s-seg
+github.com
 .github.com
 github.blog
 .github.blog
@@ -602,15 +602,39 @@ gstatic.cn=203.208.39.66,203.208.39.194,203.208.40.98,203.208.41.34,203.208.41.9
 #.googlevideo.com
 
 #Google_CN(testing)
+xn--ngstr-cn-8za9o.com
+.xn--ngstr-cn-8za9o.com
 google.cn=xn--ngstr-cn-8za9o.com,gvt1.com,gstatic.cn,google.com
-g.cn=[google.cn]
-.google.cn=[google.cn]
+g.cn
+.google.cn
+.googleapis.cn
+.gstatic.cn=[google.cn]
 method=https
-rr0---sn-2x3eenez.googlevideo.com=103.246.246.144,114.250.66.2,114.250.66.3,114.250.66.4,114.250.66.5
-rr1---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com
-rr2---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com
-rr3---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com
-rr4---sn-2x3eenez.googlevideo.com=rr0---sn-2x3eenez.googlevideo.com
+ggvcn=103.246.246.144,114.250.66.2,114.250.66.3,114.250.66.4,114.250.66.5,114.250.68.2,114.250.68.3,114.250.68.4,114.250.68.5,180.163.150.130,180.163.150.131,180.163.150.133,180.163.150.134,113.108.239.130,113.108.239.131,113.108.239.133,113.108.239.134
+rr1---sn-2x3eenez.googlevideo.com=[ggvcn]
+rr2---sn-2x3eenez.googlevideo.com=[ggvcn]
+rr3---sn-2x3eenez.googlevideo.com=[ggvcn]
+rr4---sn-2x3eenez.googlevideo.com=[ggvcn]
+r1---sn-2x3edn7l.googlevideo.com=[ggvcn]
+r2---sn-2x3edn7l.googlevideo.com=[ggvcn]
+r3---sn-2x3edn7l.googlevideo.com=[ggvcn]
+r4---sn-2x3edn7l.googlevideo.com=[ggvcn]
+rr1---sn-ni57rn7k.googlevideo.com=[ggvcn]
+rr2---sn-ni57rn7k.googlevideo.com=[ggvcn]
+rr3---sn-ni57rn7k.googlevideo.com=[ggvcn]
+rr4---sn-ni57rn7k.googlevideo.com=[ggvcn]
+r1---sn-ni57rn7k.googlevideo.com=[ggvcn]
+r2---sn-ni57rn7k.googlevideo.com=[ggvcn]
+r3---sn-ni57rn7k.googlevideo.com=[ggvcn]
+r4---sn-ni57rn7k.googlevideo.com=[ggvcn]
+rr1---sn-j5o76n7e.googlevideo.com=[ggvcn]
+rr2---sn-j5o76n7e.googlevideo.com=[ggvcn]
+rr3---sn-j5o76n7e.googlevideo.com=[ggvcn]
+rr4---sn-j5o76n7e.googlevideo.com=[ggvcn]
+r1---sn-j5o76n7e.googlevideo.com=[ggvcn]
+r2---sn-j5o76n7e.googlevideo.com=[ggvcn]
+r3---sn-j5o76n7e.googlevideo.com=[ggvcn]
+r4---sn-j5o76n7e.googlevideo.com=[ggvcn]
 
 #patreon
 method=w-md5
@@ -832,3 +856,4 @@ rentry.co
 uptodown.com
 .uptodown.com
 geti2p.net
+
