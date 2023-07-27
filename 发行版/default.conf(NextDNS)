@@ -142,7 +142,6 @@ donmai.us=[cfanycast]
 
 #Discord
 ipv6=false
-method=ttl
 discord.com=[cfanycast]
 .discord.com=[cfanycast]
 dl.discordapp.net=[cfanycast]
