@@ -141,17 +141,18 @@ donmai.us=[cfanycast]
 .donmai.us=[donmai.us]
 
 #Discord
-discord.com=ns1.pixiv.net,ns2.pixiv.net
-.discord.com=[discord.com]
-dl.discordapp.net=[discord.com]
-status.discordapp.com=[discord.com]
-media.discordapp.net=[discord.com]
-cdn.discordapp.com=[discord.com]
-images-ext-2.discordapp.net=[discord.com]
-images-ext-1.discordapp.net=[discord.com]
-discord.gg=[discord.com]
-.discord.gg=[discord.com]
-discord.io=[discord.com]
+ipv6=false
+discord.com=[cfanycast]
+.discord.com=[cfanycast]
+dl.discordapp.net=[cfanycast]
+status.discordapp.com=[cfanycast]
+media.discordapp.net=ns1.pixiv.net,ns2.pixiv.net
+cdn.discordapp.com=[cfanycast]
+images-ext-2.discordapp.net=[cfanycast]
+images-ext-1.discordapp.net=[cfanycast]
+discord.gg=[cfanycast]
+.discord.gg=[cfanycast]
+discord.io=[cfanycast]
 
 #e621
 e621.net=[cfanycast]
@@ -206,13 +207,13 @@ fgit.gq
 hub.fastgit.xyz=2.59.61.109
 
 #GitHub
-method=w-md5,s-seg
+method=ttl,w-md5,s-seg
 github.com=20.205.243.166,20.27.177.113,140.82.112.4,192.30.255.113
 .github.com
 github.blog
 .github.blog
 .github.io
-method=w-md5,filter,syn
+method=w-md5,filter,s-seg
 githubassets.com
 .githubassets.com
 githubstatus.com
@@ -270,6 +271,7 @@ dumps.wikimedia.org=208.80.154.142,208.80.154.7
 web.archive.org=207.241.226.190,207.241.237.3,207.241.234.17,207.241.234.11
 archive.org=207.241.226.176,207.241.224.57,207.241.224.60,207.241.224.41,207.241.225.120,207.241.224.51,207.241.224.28,207.241.226.162,207.241.224.27,207.241.231.70,207.241.231.56,207.241.224.59
 .archive.org
+heritrix.readthedocs.io=[cfanycast]
 
 #Archive.today
 archive.is
