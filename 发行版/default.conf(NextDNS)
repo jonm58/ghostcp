@@ -142,11 +142,12 @@ donmai.us=[cfanycast]
 
 #Discord
 ipv6=false
+method=ttl
 discord.com=[cfanycast]
 .discord.com=[cfanycast]
 dl.discordapp.net=[cfanycast]
 status.discordapp.com=[cfanycast]
-media.discordapp.net=ns1.pixiv.net,ns2.pixiv.net
+media.discordapp.net=[cfanycast]
 cdn.discordapp.com=[cfanycast]
 images-ext-2.discordapp.net=[cfanycast]
 images-ext-1.discordapp.net=[cfanycast]
