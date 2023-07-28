@@ -208,20 +208,18 @@ fgit.gq
 hub.fastgit.xyz=2.59.61.109
 
 #GitHub
-method=w-md5,s-seg
-github.com
+github.com=20.205.243.166
 .github.com
 github.blog
 .github.blog
 .github.io
-method=w-md5,filter,s-seg
 githubassets.com
 .githubassets.com
 githubstatus.com
 .githubstatus.com
 githubusercontent.com
 .githubusercontent.com
-method=syn
+method=none
 pipelines.actions.githubusercontent.com=13.107.42.16,2620:1ec:21::16
 
 #Gitlab
