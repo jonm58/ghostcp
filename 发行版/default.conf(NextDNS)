@@ -133,7 +133,6 @@ rule34.art
 .paheal.net
 
 #Danbooru
-ttl=4
 method=ttl,s-seg
 danbooru.donmai.us=[cfanycast]
 hijiribe.donmai.us=[cfanycast]
