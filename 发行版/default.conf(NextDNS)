@@ -608,7 +608,7 @@ method=https,quic
 .googlevideo.com=[sniproxy]
 
 #Youtube.Video
-#method=https,s-seg
+#method=https,s-seg,quic
 #ipv6=ture
 #.googlevideo.com
 
