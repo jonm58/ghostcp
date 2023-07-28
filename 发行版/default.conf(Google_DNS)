@@ -20,8 +20,9 @@ cfanycast=www.who.int,fbi.gov,www.cloudflare.com,www.ietf.org,ns1.pixiv.net,ns2.
 .cloudflarewarp.com=[cfanycast]
 .cloudflareinsights.com=[cfanycast]
 cloudflare-dns.com=1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001
-.cloudflare-dns.com=[cloudflare-dns.com]
-one.one.one.one=[cloudflare-dns.com]
+.cloudflare-dns.com=1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001
+one.one.one.one=1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001
+one.one.one.one.=1.1.1.1,1.0.0.1,2606:4700:4700::1111,2606:4700:4700::1001
 
 canva.com=[cfanycast]
 .canva.com
@@ -531,8 +532,8 @@ invidious.sethforprivacy.com
 
 #Google
 ttl=15
-method=ttl,w-ack,w-md5,w-ulen,s-seg,https,w-csum,df,mode2
-google.com=64.233.189.191,108.177.97.100,74.125.196.113,216.239.32.40,142.251.171.90,104.250.108.64,142.250.190.94,178.255.46.176,104.250.112.132,158.255.215.28,178.209.50.211,178.209.51.200,181.41.194.56,192.71.244.61,193.182.144.210,193.182.144.61,204.12.225.226,31.200.241.28,37.235.48.177,37.235.48.19,37.235.53.157,37.235.53.170,37.235.53.78,37.235.53.80,37.235.55.12,46.246.1.70,67.222.65.10,67.222.65.2,67.222.65.3,67.222.65.8,69.162.113.194,69.162.113.198,69.162.113.201,69.28.82.253,69.28.83.244,69.30.210.130,78.129.226.113,78.129.226.64,83.170.84.75,87.117.205.40,142.251.84.74,142.251.88.6,142.251.88.7,142.251.88.8,142.251.88.9,142.251.88.10
+method=quic,ttl,w-ack,w-md5,w-ulen,https,s-seg,w-csum,df
+google.com=64.233.189.191,216.239.32.40,108.177.97.100,142.250.1.123,142.250.190.94
 .googleapis.com=[google.com]
 .googleapis-cn.com=[google.com]
 .g.cn=[google.com]
@@ -878,4 +879,3 @@ rentry.co
 uptodown.com
 .uptodown.com
 geti2p.net
-
