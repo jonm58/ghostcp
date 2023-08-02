@@ -52,6 +52,10 @@ GOOS=windows GOARCH=amd64 go build
 ## 如何获取 TTL
 tracert 8.8.8.8
 将 TTL 长于 TTL 设置为IP地址在您所在区域内且短于服务器的TTL的节点。
+一定要关闭http3&QUIC
+
+ - FireFox系:在 about:config 中把 network.http.http3.enable 改为	false
+ - chrome(chromium)系:在 chrome://flags/#enable-quic 中改为 Disabled
 
 # 其他
 - 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明
