@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"strconv"
 
-	"github.com/yanlinLiu0424/godivert"
+	"github.com/macronut/godivert"
 )
 
 func DNSDaemon() {
