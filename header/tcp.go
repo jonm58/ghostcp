@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/yanlinLiu0424/godivert"
+	"github.com/macronut/godivert"
 )
 
 type ConnInfo struct {
