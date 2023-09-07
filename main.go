@@ -10,7 +10,7 @@ import (
 	"runtime"
 
 	"github.com/chai2010/winsvc"
-	"github.com/macronut/ghostcp/header"
+	"github.com/jonm58/ghostcp/header"
 )
 
 var ServiceMode bool = true
