@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/macronut/godivert"
+	"github.com/yanlinLiu0424/godivert"
 )
 
 func inc(ip net.IP) {
