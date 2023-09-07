@@ -1,4 +1,4 @@
-module github.com/jonm58/ghostcp
+module github.com/macronut/ghostcp
 
 go 1.16
 
