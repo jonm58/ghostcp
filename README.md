@@ -42,3 +42,15 @@ run install.bat to install the service
 ## How to get the TTL
 tracert 8.8.8.8  
 set the ttl longer than the TTL to the node whose IP address is in your area and shorter than the TTL to the server.
+
+## Which DNS server should I use
+```
+nslookup -vc t.co {dns-server}
+```
+this command can test whether the server supports Dns over **Tcp**.
+
+- [Google](https://dns.google) <kbd>8.8.8.8</kbd> <kbd>8.8.4.4</kbd>
+- [Cloudflare](https://developers.cloudflare.com/1.1.1.1/) <kbd>1.1.1.1</kbd> <kbd>1.0.0.1</kbd>
+- [DNS.SB](https://dns.sb) <kbd>185.222.222.222</kbd> <kbd>45.11.45.11</kbd>
+- [Quad 101](https://101.101.101.101) <kbd>101.101.101.101</kbd> <kbd>101.102.103.104</kbd>
+- [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>
