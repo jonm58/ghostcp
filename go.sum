@@ -4,7 +4,5 @@ github.com/macronut/godivert v0.0.0-20200223163208-e0ee08361ab9 h1:6ASu1qSwyTtiP
 github.com/macronut/godivert v0.0.0-20200223163208-e0ee08361ab9/go.mod h1:WBXFEDDmnnVWR14TQAvMxdaHrW7Ewbt7pNerMHiyNzY=
 github.com/williamfhe/godivert v0.0.0-20181229124620-a48c5b872c73 h1:uTcyLPxotESVvsf6sWcw+6MyDAsuuI7Q2TJn+pWyt/c=
 github.com/williamfhe/godivert v0.0.0-20181229124620-a48c5b872c73/go.mod h1:2A+pcb3S0puG6gpwq2d8+7HGgCWXyCBwnsv/n3abx4U=
-github.com/yanlinLiu0424/godivert v0.0.0-20230907035912-0a1438f3f36c h1:E9WGbfxtjh+1dg2Zt48Cz67xLC4MkYgeoh00lptyl/0=
-github.com/yanlinLiu0424/godivert v0.0.0-20230907035912-0a1438f3f36c/go.mod h1:sjsopsqiuVGv7ewCil7OuM8RCz8W3HPHXPAfXL1mXhI=
 golang.org/x/sys v0.1.0 h1:kunALQeHf1/185U1i0GOB/fy1IPRDDpuoOOqRReG57U=
 golang.org/x/sys v0.1.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
