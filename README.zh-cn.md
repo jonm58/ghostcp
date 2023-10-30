@@ -21,12 +21,12 @@ git clone https://github.com/macronut/ghostcp
 CD Ghostcp
 GOOS=windows GOARCH=amd64 go build
 ```
-从 https://github.com/basil00/Divert/releases/v1.4.3 下载WinDivert
+从"https://github.com/basil00/Divert/releases/v1.4.3"下载WinDivert
 
 ## 以客户端身份运行
-运行 TCpioneer.exe 启动程序
+运行ghostcp.exe启动程序
 ## 作为服务运行
-运行 install.bat 以安装服务
+运行install.bat安装服务
 
 ## 如何配置
 ```
@@ -42,19 +42,17 @@ GOOS=windows GOARCH=amd64 go build
 ### 方法：
 ```
   TTL       #伪造的TCP数据包将使用您设置的TTL
-  W-MD5     #假TCP数据包将具有错误的MD5选项
+  w-md5     #假TCP数据包将具有错误的MD5选项
   w-csum    #假TCP数据包将具有错误的校验和
   w-ack     #假TCP数据包将具有错误的 ACK 编号
   tfo       #当服务器支持 TCP 快速打开时，SYN数据包将获取部分数据
-  DF        #真正的TCP数据包不会被分段
+  df        #真正的TCP数据包不会被分段
   https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
 ```
 ## 如何获取 TTL
 tracert 8.8.8.8
 将 TTL 长于 TTL 设置为IP地址在您所在区域内且短于服务器的TTL的节点。
-不建议关闭http3&QUIC
 
 # 其他
 - 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明
-- [最新的配置文件(GoogleDNS)](https://github.com/jonm58/ghostcp/blob/master/%E5%8F%91%E8%A1%8C%E7%89%88/default.conf(Google_DNS))
-- [最新的配置文件(NextDNS)](https://github.com/jonm58/ghostcp/blob/master/%E5%8F%91%E8%A1%8C%E7%89%88/default.conf(NextDNS))
+- [最新的配置文件](https://github.com/jonm58/ghostcp/blob/master/%E5%8F%91%E8%A1%8C%E7%89%88/default.conf)
