@@ -33,21 +33,23 @@ GOOS=windows GOARCH=amd64 go build
   server=IP:端口    #配置中的域将使用此DNS（DNSoverTCP），如果未设置，它将使用系统的DNS
   ipv6=true/false   #下面的将启用/禁用 IPv6
   subdomain=*       #set域搜索的深度，默认为 2
-  ttl=*             #伪造的 TCP 数据包将使用此 TTL
+  ttl=*             #伪造的TCP数据包将使用此 TTL
   domain=ip，ip,... #这个域将使用这些IP
-  domain            #这个域将由 DNS 解析
-  IP:端口           #这个 IP：端口在创建连接时会发送假数据包
+  domain            #这个域将由DNS解析
+  IP:端口           #这个IP：端口在创建连接时会发送假数据包
   method=*          #修改 TCP 的方法
   ```
 ### 方法：
 ```
-  TTL       #伪造的TCP数据包将使用您设置的TTL
+  ttl       #伪造的TCP数据包将使用您设置的ttl
   w-md5     #假TCP数据包将具有错误的MD5选项
   w-csum    #假TCP数据包将具有错误的校验和
   w-ack     #假TCP数据包将具有错误的 ACK 编号
   tfo       #当服务器支持 TCP 快速打开时，SYN数据包将获取部分数据
   df        #真正的TCP数据包不会被分段
   https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
+  sat       #持续注入TCP包直到TLS握手完成
+  mode2     #以另一种顺序注入TCP包
 ```
 ## 如何获取 TTL
 tracert 8.8.8.8
