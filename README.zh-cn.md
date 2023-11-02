@@ -42,9 +42,10 @@ GOOS=windows GOARCH=amd64 go build
 ### 方法：
 ```
   ttl       #伪造的TCP数据包将使用您设置的ttl
+  s-seg     #TCP连接的首包小于8字节
   w-md5     #假TCP数据包将具有错误的MD5选项
   w-csum    #假TCP数据包将具有错误的校验和
-  w-ack     #假TCP数据包将具有错误的 ACK 编号
+  w-ack     #假TCP数据包将具有错误的确认码
   tfo       #当服务器支持 TCP 快速打开时，SYN数据包将获取部分数据
   df        #真正的TCP数据包不会被分段
   https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
