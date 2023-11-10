@@ -31,6 +31,7 @@ GOOS=windows GOARCH=amd64 go build
 ## 如何配置
 ```
   server=IP:端口    #配置中的域将使用此DNS（DNSoverTCP），如果未设置，它将使用系统的DNS
+  ipv4=true/false   #下面的将启用/禁用 IPv4
   ipv6=true/false   #下面的将启用/禁用 IPv6
   subdomain=*       #set域搜索的深度，默认为 2
   ttl=*             #伪造的TCP数据包将使用此 TTL
