@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
+	"math"
 	"log"
 	"math/rand"
 	"net"
@@ -325,14 +326,32 @@ func SendFakePacket(winDivert *godivert.WinDivertHandle, info *ConnInfo, packet 
 		} else {
 			rawbuf[8] = byte(info.TTL)
 		}
-		fake_packet.Raw = rawbuf[:len(packet.Raw)]
+		interval := 1500
+		packetCount := math.Ceil(float64(len(packet.Raw)) / float64(interval))
+		if packetCount > 1 {
+			for i := 0; i < len(packet.Raw); i += interval {
+				curLen := min(i+interval,len(packet.Raw))
+				fake_packet.Raw = rawbuf[i:curLen]
 
-		fake_packet.CalcNewChecksum(winDivert)
+				fake_packet.CalcNewChecksum(winDivert)
+		
+				for i := 0; i < count; i++ {
+					_, err = winDivert.Send(&fake_packet)
+					if err != nil {
+						return 0, err
+					}
+				}
+			}
+		} else {
+			fake_packet.Raw = rawbuf[:len(packet.Raw)]
 
-		for i := 0; i < count; i++ {
-			_, err = winDivert.Send(&fake_packet)
-			if err != nil {
-				return 0, err
+			fake_packet.CalcNewChecksum(winDivert)
+
+			for i := 0; i < count; i++ {
+				_, err = winDivert.Send(&fake_packet)
+				if err != nil {
+					return 0, err
+				}
 			}
 		}
 	}
@@ -956,7 +975,7 @@ func TCPDaemon(address string, forward bool) {
 					}
 					continue
 				}
-			} else if packet.Raw[ipheadlen+13] == TCP_SYN {
+			} else if (packet.Raw[ipheadlen+13] & TCP_SYN) != 0 {
 				dstIP := packet.DstIP()
 				dstAddr := dstIP.String()
 				config, ok := IPLookup(dstAddr)
