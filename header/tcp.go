@@ -975,7 +975,7 @@ func TCPDaemon(address string, forward bool) {
 					}
 					continue
 				}
-			} else if (packet.Raw[ipheadlen+13] & TCP_SYN) != 0 {
+			} else if (packet.Raw[ipheadlen+13] == TCP_SYN {
 				dstIP := packet.DstIP()
 				dstAddr := dstIP.String()
 				config, ok := IPLookup(dstAddr)
