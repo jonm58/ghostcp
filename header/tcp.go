@@ -459,7 +459,7 @@ func TCPDetection(winDivert *godivert.WinDivertHandle, winDivertAddr godivert.Wi
 		0, 1, 0, 0,
 		0, 0, 0, 0,
 		0, 0, 0, 0,
-		0x50, TCP_SYN, 0, 0,
+		0x50, TCP_SYN， 0, 0,
 		0, 0, 0, 0}
 
 	if srcIP != nil {
@@ -975,7 +975,7 @@ func TCPDaemon(address string, forward bool) {
 					}
 					continue
 				}
-			} else if (packet.Raw[ipheadlen+13] == TCP_SYN {
+			} else if packet.Raw[ipheadlen+13] == TCP_SYN {
 				dstIP := packet.DstIP()
 				dstAddr := dstIP.String()
 				config, ok := IPLookup(dstAddr)
