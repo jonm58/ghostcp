@@ -459,7 +459,7 @@ func TCPDetection(winDivert *godivert.WinDivertHandle, winDivertAddr godivert.Wi
 		0, 1, 0, 0,
 		0, 0, 0, 0,
 		0, 0, 0, 0,
-		0x50, TCP_SYN， 0, 0,
+		0x50, TCP_SYN, 0, 0,
 		0, 0, 0, 0}
 
 	if srcIP != nil {
