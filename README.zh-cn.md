@@ -1,6 +1,9 @@
 🌏: [English](https://github.com/jonm58/ghostcp/blob/master/README.md)，
 [**简体中文**](https://github.com/jonm58/ghostcp/blob/master/README.zh-cn.md)
 
+# Revolt:
+https://rvlt.gg/Ws2kexsD
+
 # GhosTCP
 (TCPioneer)GhosTCP是一个适用于Windows的程序，可以保护TCP连接免受干扰。 
 
@@ -68,8 +71,6 @@ nslookup -vc t.co {dns-server}
 - [DNS.SB](https://dns.sb) <kbd>185.222.222.222</kbd> <kbd>45.11.45.11</kbd> <kbd>2a09::</kbd> <kbd>2a11::</kbd>
 - [Quad 101](https://101.101.101.101) <kbd>101.101.101.101</kbd> <kbd>101.102.103.104</kbd> <kbd>2001:de4::101</kbd> <kbd>2001:de4::102</kbd>
 - [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>
-
-Revolt:https://rvlt.gg/Ws2kexsD
 - [NextDNS](https://nextdns.io/)  <kbd>45.90.28.71</kbd>  <kbd>45.90.30.71</kbd>  <kbd>2a07:a8c0::d3:f572</kbd>  <kbd>2a07:a8c1::d3:f572</kbd>  <kbd>45.90.28.0</kbd>  <kbd>45.90.30.0</kbd>
 
 # 其他
