@@ -31,7 +31,7 @@ run install.bat to install the service
   ```
 ### methods:
 ```
-  ttl               #the fake tcp packets will use the TTL you set
+  ttl               #The fake TCP packet will use the ttl you set, you need to specify its value above, such as ttl=15
   w-md5             #the fake tcp packets will have a wrong md5 option
   w-csum            #the fake tcp packets will have a wrong checksum
   w-ack             #the fake tcp packets will have a wrong ACK number
