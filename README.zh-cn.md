@@ -64,7 +64,7 @@ tracert 8.8.8.8
 ```
 nslookup -vc t.co {dns-server}
 ```
-该命令可以测试服务器是否支持Dns over **Tcp**.
+该命令可以测试服务器是否支持DNS over **TCP**.
 
 - [Google](https://dns.google) <kbd>8.8.8.8</kbd> <kbd>8.8.4.4</kbd> <kbd>2001:4860:4860::8888</kbd> <kbd>2001:4860:4860::8844</kbd>
 - [Cloudflare](https://developers.cloudflare.com/1.1.1.1/) <kbd>1.1.1.1</kbd> <kbd>1.0.0.1</kbd> <kbd>2606:4700:4700::1111</kbd> <kbd>2606:4700:4700::1001</kbd>
