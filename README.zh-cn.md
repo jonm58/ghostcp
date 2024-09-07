@@ -1,5 +1,5 @@
-🌏: [English](https://github.com/jonm58/ghostcp/blob/master/README.md)，
-[**简体中文**](https://github.com/jonm58/ghostcp/blob/master/README.zh-cn.md)
+🌏: [**English**](https://github.com/jonm58/ghostcp/blob/master/README.md)，
+[简体中文](https://github.com/jonm58/ghostcp/blob/master/README.zh-cn.md)
 
 # Revolt:
 https://rvlt.gg/Ws2kexsD
@@ -33,15 +33,15 @@ GOOS=windows GOARCH=amd64 go build
 
 ## 如何配置
 ```
-  server=IP:端口    #配置中的域将使用此DNS（DNSoverTCP），如果未设置，它将使用系统的DNS
+  server=IP:端口    #配置中的域将使用此DNS（DNS over TCP），如果未设置，它将使用系统的DNS
   ipv4=true/false   #下面的将启用/禁用 IPv4
   ipv6=true/false   #下面的将启用/禁用 IPv6
-  subdomain=*       #set域搜索的深度，默认为 2
-  ttl=*             #伪造的TCP数据包将使用此 TTL
+  subdomain=*       #设置域名搜索的深度，默认为2
+  ttl=*             #伪造的TCP数据包将使用此TTL
   domain=ip，ip,... #这个域将使用这些IP
   domain            #这个域将由DNS解析
   IP:端口           #这个IP：端口在创建连接时会发送假数据包
-  method=*          #修改 TCP 的方法
+  method=*          #修改TCP的方法
   ```
 ### 方法：
 ```
