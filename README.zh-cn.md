@@ -42,6 +42,7 @@ GOOS=windows GOARCH=amd64 go build
   domain            #这个域将由DNS解析
   IP:端口           #这个IP：端口在创建连接时会发送假数据包
   method=*          #修改TCP的方法
+  mss=*             #(设置最大段大小)[https://en.wikipedia.org/wiki/Maximum_segment_size]可以使服务器返回的TCP数据包更小
   ```
 ### 方法：
 ```
@@ -50,12 +51,15 @@ GOOS=windows GOARCH=amd64 go build
   w-md5     #假TCP数据包将具有错误的MD5值
   w-csum    #假TCP数据包将具有错误的校验和
   w-ack     #假TCP数据包将具有错误的ACK号
-  tfo       #当服务器支持TCP快速打开，SYN数据包将获取部分数据
+  w-ulen    #假TCP数据包将具有错误的ulen
 
+  tfo       #当服务器支持TCP快速打开，SYN数据包将获取部分数据
   df        #发出的 TCP 包不会分段 (Don't Fragment)
   https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
   sat       #持续注入TCP包直到TLS握手完成
   mode2     #以另一种顺序注入TCP包
+  quic      #启用QUIC(http3)[默认关闭]
+  syn
 ```
 ## 如何获取 TTL
 ```
