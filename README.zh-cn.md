@@ -50,7 +50,8 @@ GOOS=windows GOARCH=amd64 go build
   w-md5     #假TCP数据包将具有错误的MD5值
   w-csum    #假TCP数据包将具有错误的校验和
   w-ack     #假TCP数据包将具有错误的ACK号
-  tfo       #当服务器支持TCP快速打开时，SYN数据包将获取部分数据
+  tfo       #当服务器支持TCP快速打开，SYN数据包将获取部分数据
+  
   df        #发出的 TCP 包不会分段 (Don't Fragment)
   https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
   sat       #持续注入TCP包直到TLS握手完成
@@ -58,20 +59,20 @@ GOOS=windows GOARCH=amd64 go build
 ```
 ## 如何获取 TTL
 tracert 8.8.8.8
-将 TTL 长于 TTL 设置为IP地址在您所在区域内且短于服务器的TTL的节点。
+对您所在区域的IP地址节点，设置比TTL更长的ttl.对服务器设置更短的ttl。
 
 ## 我应该使用哪个DNS服务器
 ```
 nslookup -vc t.co {dns-server}
 ```
-该命令可以测试服务器是否支持DNS over **TCP**.
+该命令可以测试服务器是否支持**DNS over TCP**.
 
 - [Google](https://dns.google) <kbd>8.8.8.8</kbd> <kbd>8.8.4.4</kbd> <kbd>2001:4860:4860::8888</kbd> <kbd>2001:4860:4860::8844</kbd>
 - [Cloudflare](https://developers.cloudflare.com/1.1.1.1/) <kbd>1.1.1.1</kbd> <kbd>1.0.0.1</kbd> <kbd>2606:4700:4700::1111</kbd> <kbd>2606:4700:4700::1001</kbd>
 - [DNS.SB](https://dns.sb) <kbd>185.222.222.222</kbd> <kbd>45.11.45.11</kbd> <kbd>2a09::</kbd> <kbd>2a11::</kbd>
 - [Quad 101](https://101.101.101.101) <kbd>101.101.101.101</kbd> <kbd>101.102.103.104</kbd> <kbd>2001:de4::101</kbd> <kbd>2001:de4::102</kbd>
-- [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>  <kbd>114.114.115.115</kbd>  <kbd>114.114.114.119</kbd>  <kbd>114.114.115.119</kbd>  <kbd>114.114.114.110</kbd>  <kbd>114.114.115.110<kbd>
 - [NextDNS](https://nextdns.io/)  <kbd>45.90.28.71</kbd>  <kbd>45.90.30.71</kbd>  <kbd>2a07:a8c0::d3:f572</kbd>  <kbd>2a07:a8c1::d3:f572</kbd>  <kbd>45.90.28.0</kbd>  <kbd>45.90.30.0</kbd>
+- [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>  <kbd>114.114.115.115</kbd>  <kbd>114.114.114.119</kbd>  <kbd>114.114.115.119</kbd>  <kbd>114.114.114.110</kbd>  <kbd>114.114.115.110<kbd>
 
 # 其他
 - 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明

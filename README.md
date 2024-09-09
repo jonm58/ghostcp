@@ -39,6 +39,8 @@ run install.bat to install the service
   
   df                #the true tcp packets will not be fragmented
   https             #the domain below will be move to https when using http on port 80
+  sat               #Continue injecting TCP packets until the TLS handshake is completed
+  mode2             #Inject TCP packets in another order
 ```
 ## How to get the TTL
 tracert 8.8.8.8  
@@ -48,11 +50,11 @@ set the ttl longer than the TTL to the node whose IP address is in your area and
 ```
 nslookup -vc t.co {dns-server}
 ```
-this command can test whether the server supports Dns over **Tcp**.
+this command can test whether the server supports **DNS over TCP**.
 
 - [Google](https://dns.google) <kbd>8.8.8.8</kbd> <kbd>8.8.4.4</kbd> <kbd>2001:4860:4860::8888</kbd> <kbd>2001:4860:4860::8844</kbd>
 - [Cloudflare](https://developers.cloudflare.com/1.1.1.1/) <kbd>1.1.1.1</kbd> <kbd>1.0.0.1</kbd> <kbd>2606:4700:4700::1111</kbd> <kbd>2606:4700:4700::1001</kbd>
 - [DNS.SB](https://dns.sb) <kbd>185.222.222.222</kbd> <kbd>45.11.45.11</kbd> <kbd>2a09::</kbd> <kbd>2a11::</kbd>
 - [Quad 101](https://101.101.101.101) <kbd>101.101.101.101</kbd> <kbd>101.102.103.104</kbd> <kbd>2001:de4::101</kbd> <kbd>2001:de4::102</kbd>
-- [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>
 - [NextDNS](https://nextdns.io/)  <kbd>45.90.28.71</kbd>  <kbd>45.90.30.71</kbd>  <kbd>2a07:a8c0::d3:f572</kbd>  <kbd>2a07:a8c1::d3:f572</kbd>  <kbd>45.90.28.0</kbd>  <kbd>45.90.30.0</kbd>
+- [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>  <kbd>114.114.115.115</kbd>  <kbd>114.114.114.119</kbd>  <kbd>114.114.115.119</kbd>  <kbd>114.114.114.110</kbd>  <kbd>114.114.115.110<kbd>
