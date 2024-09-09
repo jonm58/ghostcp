@@ -43,7 +43,9 @@ run install.bat to install the service
   mode2             #Inject TCP packets in another order
 ```
 ## How to get the TTL
+```
 tracert 8.8.8.8  
+```
 set the ttl longer than the TTL to the node whose IP address is in your area and shorter than the TTL to the server.
 
 ## Which DNS server should I use

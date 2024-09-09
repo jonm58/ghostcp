@@ -51,14 +51,16 @@ GOOS=windows GOARCH=amd64 go build
   w-csum    #假TCP数据包将具有错误的校验和
   w-ack     #假TCP数据包将具有错误的ACK号
   tfo       #当服务器支持TCP快速打开，SYN数据包将获取部分数据
-  
+
   df        #发出的 TCP 包不会分段 (Don't Fragment)
   https     #在端口80上使用HTTP时，下面的域将移动到 HTTPS
   sat       #持续注入TCP包直到TLS握手完成
   mode2     #以另一种顺序注入TCP包
 ```
 ## 如何获取 TTL
-tracert 8.8.8.8
+```
+tracert 8.8.8.8  
+```
 对您所在区域的IP地址节点，设置比TTL更长的ttl.对服务器设置更短的ttl。
 
 ## 我应该使用哪个DNS服务器
