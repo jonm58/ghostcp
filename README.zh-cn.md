@@ -42,8 +42,9 @@ GOOS=windows GOARCH=amd64 go build
   domain            #这个域将由DNS解析
   IP:端口           #这个IP：端口在创建连接时会发送假数据包
   method=*          #修改TCP的方法
-  mss=*             #(设置最大段大小)[https://en.wikipedia.org/wiki/Maximum_segment_size]可以使服务器返回的TCP数据包更小
+  mss=*             #设置最大段大小可以使服务器返回的TCP数据包更小
   ```
+[最大段大小(MSS)](https://www.cloudflare-cn.com/learning/network-layer/what-is-mss)
 ### 方法：
 ```
   ttl       #伪造的TCP数据包将使用您设置的ttl，您需要在上文指定其值，如ttl=15
