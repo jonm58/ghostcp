@@ -664,6 +664,7 @@ func TCPDaemon(address string, forward bool) {
 				case 53:
 					appLayer = TCP_DNS
 				case 80:
+				case 8080:
 					appLayer = TCP_HTTP
 				case 443:
 				case 8443:
