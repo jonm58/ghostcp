@@ -30,9 +30,9 @@ jobs:
           echo "GOOS: $GOOS, GOARCH: $GOARCH, RELEASE_NAME: $osarch"
           echo "osarch=$osarch" >> $GITHUB_ENV
       - name: Set up Go
-        uses: actions/setup-go@v5.2.0
+        uses: actions/setup-go@v5.5.0
         with:
-          go-version: '1.21'
+          go-version: '1.24.3'
           check-latest: true
       - name: Get project dependencies
         run: go mod download
@@ -45,7 +45,7 @@ jobs:
         run: |
           cp README.md LICENSE release/* ghostcp-${{ env.osarch }}
       - name: Upload files to Artifacts
-        uses: actions/upload-artifact@v4.5.0
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: ghostcp-${{ env.osarch }}
           path: |
