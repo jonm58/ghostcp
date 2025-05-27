@@ -37,7 +37,7 @@ func DNSDaemon() {
 		defer wg.Done()
 		defer winDivert.Close()
 
-		rawbuf := make([]byte, 4096)
+		rawbuf := make([]byte, 3377)
 		for {
 			packet, err := winDivert.Recv()
 			if err != nil {
@@ -150,7 +150,7 @@ func DNSDaemon() {
 				} else {
 					logPrintln(2, qname, config.Option)
 					go func(packet godivert.Packet, answers6 []byte, offset int) {
-						rawbuf := make([]byte, 4096)
+						rawbuf := make([]byte, 3377)
 						if ipv6 {
 							copy(rawbuf, []byte{96, 12, 19, 68, 0, 98, 17, 128})
 							copy(rawbuf[8:], packet.Raw[24:40])
@@ -269,7 +269,7 @@ func DNSRecvDaemon() {
 	go func() {
 		defer wg.Done()
 		defer winDivert.Close()
-		rawbuf := make([]byte, 4096)
+		rawbuf := make([]byte, 3377)
 		for {
 			packet, err := winDivert.Recv()
 			if err != nil {
