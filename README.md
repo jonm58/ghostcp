@@ -60,3 +60,5 @@ this command can test whether the server supports **DNS over TCP**.
 - [Quad 101](https://101.101.101.101) <kbd>101.101.101.101</kbd> <kbd>101.102.103.104</kbd> <kbd>2001:de4::101</kbd> <kbd>2001:de4::102</kbd>
 - [NextDNS](https://nextdns.io/)  <kbd>45.90.28.71</kbd>  <kbd>45.90.30.71</kbd>  <kbd>2a07:a8c0::d3:f572</kbd>  <kbd>2a07:a8c1::d3:f572</kbd>  <kbd>45.90.28.0</kbd>  <kbd>45.90.30.0</kbd>
 - [114 Dns](http://114dns.com)  <kbd>114.114.114.114</kbd>  <kbd>114.114.115.115</kbd>  <kbd>114.114.114.119</kbd>  <kbd>114.114.115.119</kbd>  <kbd>114.114.114.110</kbd>  <kbd>114.114.115.110<kbd>
+ - [DNS4EU](https://www.joindns4.eu/for-public) <kbd>86.54.11.1</kbd> <kbd>2a13:1001::86:54:11:1</kbd> <kbd>86.54.11.12</kbd> <kbd>2a13:1001::86:54:11:12</kbd>
+ 
